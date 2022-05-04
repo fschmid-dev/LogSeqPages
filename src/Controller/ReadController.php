@@ -22,6 +22,7 @@ class ReadController extends AbstractController
         if (!str_contains($content, 'public:: true')) {
             throw new NotFoundHttpException();
         }
+        $content = $this->removeProperties($content);
 
         return $this->render('read/index.html.twig', [
             'file' => $file,
@@ -46,5 +47,14 @@ class ReadController extends AbstractController
         }
 
         return $this->projectDir . '/logseq/pages/' . $file;
+    }
+
+    private function removeProperties(string $content): string
+    {
+        return trim(preg_replace(
+            '/^[^-].*::.*/m',
+            '',
+            $content
+        ));
     }
 }

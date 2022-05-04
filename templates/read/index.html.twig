@@ -6,6 +6,8 @@
     <div class="container">
         <div class="h1">{{ file }}</div>
         <hr>
-        {{ content|markdown_to_html|renderLogSeqPage|raw }}
+        <div class="logseq_content">
+            {{ content|markdown_to_html|renderLogSeqPage|raw }}
+        </div>
     </div>
 {% endblock %}

@@ -52,11 +52,11 @@ class RenderLogSeqPageExtension extends AbstractExtension
             $content
         );
 
-        $content = preg_replace(
-            '/^[^-].*/',
+        $content = trim(preg_replace(
+            '/^[^-].*::.*$/',
             '',
             $content
-        );
+        ));
 
         $content = str_replace(
             '<img src="../assets',
