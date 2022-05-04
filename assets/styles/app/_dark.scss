@@ -1,0 +1,18 @@
+html.theme-dark {
+  --body-bg: var(--gray-900);
+  --body-color: white;
+  --header-bg: var(--gray-800)!important;
+  --footer-bg: var(--gray-800);
+  --color-mobile-menu-bg: var(--dark);
+  --color-link: var(--color-secondary);
+  --color-link-hover: var(--color-secondary-dark);
+
+  --button-bg: var(--dark);
+  --button-border: var(--dark);
+  --button-bg-hover: var(--body-bg);
+  --button-border-hover: var(--light);
+  --button-color-hover: var(--body-color);
+
+  --card-cap-bg: var(--dark);
+  --card-border-color: var(--dark);
+}

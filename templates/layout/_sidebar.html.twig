@@ -1,0 +1,11 @@
+<div class="card mb-4">
+    <div class="card-header">{{ 'logseq.contents'|trans }}</div>
+    <div class="card-body">
+        {% set content %}
+            {% include '@pages/contents.md' %}
+        {% endset %}
+        <div class="logseq_content">
+        {{ content|markdown_to_html|renderLogSeqPage|raw }}
+        </div>
+    </div>
+</div>

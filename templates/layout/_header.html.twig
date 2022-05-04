@@ -1,0 +1,18 @@
+<header class="header navbar navbar-expand-md navbar-dark py-0 sticky-top justify-content-between">
+    <div class="container align-items-stretch">
+        <a href="{{ path('home') }}" class="navbar-brand header__brand" title="Splitters Diary">
+            <i class="fa-solid fa-book-open-reader"></i> {{ 'app.name'|trans }}
+        </a>
+
+        <div class="menu-item" {{ stimulus_controller('theme-toggle') }}>
+            <a href="#" class="menu-link" {{ stimulus_action('theme-toggle', 'toggle') }}>
+                <div class="theme-dark-hide" title="{{ 'theme.change_to_dark'|trans }}">
+                    <i class="fas fa-moon fa-fw me-2 me-lg-0"></i> <div class="d-inline-block d-lg-none">{{ 'theme.dark'|trans }}</div>
+                </div>
+                <div class="theme-light-hide" title="{{ 'theme.change_to_light'|trans }}">
+                    <i class="fas fa-sun fa-fw me-2 me-lg-0"></i> <div class="d-inline-block d-lg-none">{{ 'theme.light'|trans }}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>

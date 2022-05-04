@@ -1,0 +1,38 @@
+:root {
+  --blockquote-bg: var(--light);
+
+  &.theme-dark {
+    --blockquote-bg: var(--dark);
+  }
+}
+
+.text-body-color {
+  color: var(--body-color);
+}
+
+.text-box--gray {
+  background-color: var(--blockquote-bg);
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.theme-dark,
+.ea-dark-scheme {
+  .theme-dark-hide {
+    display: none;
+  }
+}
+.theme-light,
+.ea-light-scheme {
+  .theme-light-hide {
+    display: none;
+  }
+}

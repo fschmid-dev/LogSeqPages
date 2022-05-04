@@ -1,0 +1,48 @@
+:root {
+  --list-selector-background: var(--body-bg);
+  --list-selector-background-hover: var(--body-bg);
+  --list-selector-color: var(--body-color);
+  --list-selector-color-hover: var(--body-color);
+  --list-selector-border: var(--light);
+  --list-selector-border-hover: var(--color-secondary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+.list__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--list-selector-color);
+  background-color: var(--list-selector-background);
+  border: 2px solid var(--list-selector-border);
+  margin-top: -2px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:hover {
+    z-index: 1;
+    color: var(--list-selector-color-hover);
+    background-color: var(--list-selector-background-hover);
+    border-color: var(--list-selector-border-hover);
+    text-decoration: none;
+  }
+}
+
+html.theme-dark {
+  --list-selector-background: var(--body-bg);
+  --list-selector-background-hover: var(--gray-800);
+  --list-selector-border: var(--dark);
+  --list-selector-border-hover: var(--color-secondary);
+}

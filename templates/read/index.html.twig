@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.name'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="h1">{{ file }}</div>
+        <hr>
+        {{ content|markdown_to_html|renderLogSeqPage|raw }}
+    </div>
+{% endblock %}

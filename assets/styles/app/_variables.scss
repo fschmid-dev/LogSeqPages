@@ -1,0 +1,75 @@
+:root {
+  --primary-h: 195;
+  --primary-s: 73.6%;
+  --primary-l: 20.8%;
+
+  --secondary-h: 196;
+  --secondary-s: 80.4%;
+  --secondary-l: 56.1%;
+
+  --orange-h: 27;
+  --orange-s: 98%;
+  --orange-l: 54%;
+
+  --green-h: 121;
+  --green-s: 49%;
+  --green-l: 46%;
+
+  --color-light-delta: 15%;
+  --color-dark-delta: 15%;
+
+  --color-primary-light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + var(--color-light-delta)));
+  --color-primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  --color-primary-dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - var(--color-dark-delta)));
+
+  --color-secondary-light: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + var(--color-light-delta)));
+  --color-secondary: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
+  --color-secondary-dark: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) - var(--color-dark-delta)));
+
+  --color-orange-light: hsl(var(--orange-h), var(--orange-s), calc(var(--orange-l) + var(--color-light-delta)));
+  --color-orange: hsl(var(--orange-h), var(--orange-s), var(--orange-l));
+  --color-orange-dark: hsl(var(--orange-h), var(--orange-s), calc(var(--orange-l) - var(--color-dark-delta)));
+
+  --color-green-light: hsl(var(--green-h), var(--green-s), calc(var(--green-l) + var(--color-light-delta)));
+  --color-green: hsl(var(--green-h), var(--green-s), var(--green-l));
+  --color-green-dark: hsl(var(--green-h), var(--green-s), calc(var(--green-l) - var(--color-dark-delta)));
+
+  --color-danger: #A94442;
+  --color-danger-background: #F2DEDE;
+  --color-danger-border: #EBCCD1;
+
+  --color-info: #31708F;
+  --color-info-background: #D9EDF7;
+  --color-info-border: #BCE8F1;
+
+  --color-success: #3C763D;
+  --color-success-background: #DFF0D8;
+  --color-success-border: #D6E9C6;
+
+  --color-warning: #8A6D3B;
+  --color-warning-background: #FCF8E3;
+  --color-warning-border: #FAEBCC;
+
+  --header-bg: var(--color-primary);
+  --header-hover: var(--color-primary-light);
+  --footer-bg: var(--color-secondary);
+  --footer-hover: var(--color-secondary-dark);
+
+  --color-menu-bg-hover: var(--color-primary-light);
+  --color-menu: white;
+  --color-menu-hover: white;
+
+  --color-mobile-menu-bg: var(--body-color);
+
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-primary-light);
+
+  --input-bg: var(--body-bg);
+  --input-color: var(--body-color);
+  --input-border-color: var(--gray-400);
+
+  --card-bg: var(--body-bg);
+  --card-border-color: var(--gray-400);
+  --card-cap-bg: var(--color-primary);
+  --card-cap-color: white;
+}

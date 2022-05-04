@@ -1,0 +1,11 @@
+<footer class="footer">
+    <div class="container">
+        <ul class="menu menu--divider">
+            <li class="menu-item {% if app.request.get('_route') == 'privacy'%}active{% endif %}">
+                <span class="menu-link" title="Splitter">
+                    &copy; {{ 'app.name'|trans }}
+                </span>
+            </li>
+        </ul>
+    </div>
+</footer>

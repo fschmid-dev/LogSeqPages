@@ -1,0 +1,55 @@
+:root {
+  --tabs-bg-color: var(--body-bg);
+
+  --tab-bg-color: var(--tabs-bg-color);
+  --tab-border-color: var(--body-color);
+  --tab-color: var(--body-color);
+
+  --tab-bg-active: var(--color-primary);
+  --tab-border-color-active: var(--color-primary);
+  --tab-color-active: white;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  border: 0;
+  box-shadow: 0 1px 0 var(--body-color);
+  margin: 0 0 20px;
+  padding-left: 0;
+
+  &.tabs--full-width-tabs {
+    align-items: stretch;
+
+    .tab__item {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .tab__link {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+.tab__link {
+  border: none;
+  margin: 0 28px 0 0;
+  padding: 4px 0 8px;
+  color: var(--body-color);
+  display: block;
+  background: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: var(--color-link-hover);
+  }
+
+  &.active {
+    color: var(--color-link);
+    box-shadow: inset 0 -2px 0 0 var(--color-link);
+  }
+}

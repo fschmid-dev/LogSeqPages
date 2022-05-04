@@ -1,0 +1,40 @@
+@import "app/override";
+
+@import "app/custom_bootstrap";
+@import "app/reboot";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "app/override_mmenu";
+
+@import "app/font";
+@import "app/utils";
+
+@import "layout/body";
+@import "layout/header";
+@import "layout/footer";
+
+@import "block/button";
+@import "block/card";
+@import "block/list";
+@import "block/menu";
+
+@import "app/dark";
+
+.logseq_content {
+  > ul,
+  > li {
+    list-style: none;
+  }
+}
+
+ul,
+li {
+  ul {
+    padding-left: 1rem;
+  }
+}
+
+li {
+  margin-bottom: .5rem;
+}

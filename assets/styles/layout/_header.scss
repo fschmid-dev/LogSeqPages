@@ -1,0 +1,43 @@
+.header {
+  background-color: var(--header-bg);
+}
+
+.header__brand,
+mm-burger {
+  padding: 1rem;
+  color: var(--color-menu);
+
+  &:hover,
+  &:focus {
+    background-color: var(--header-hover);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .header__menu {
+    height: 100%;
+  }
+
+  #accountDropdown {
+    position: relative;
+
+    ul {
+      top: calc(100% - 1px);
+      right: -1px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+
+    &:focus-within {
+      ul {
+        display: block;
+      }
+    }
+  }
+}

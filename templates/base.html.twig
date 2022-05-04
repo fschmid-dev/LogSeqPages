@@ -2,18 +2,61 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{{ 'app.name'|trans }}{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+
+        {% include ('layout/_variables.html.twig') %}
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+        {% block head_javascripts %}
+            <script>
+                let theme = window.sessionStorage.getItem('theme');
+                if (!theme) {
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        theme = 'dark';
+                    }
+                    window.sessionStorage.setItem('theme', theme);
+                }
+                document.getElementsByTagName('html')[0].className = `theme-${theme}`;
+            </script>
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% include('layout/_header.html.twig') %}
+
+        {% set content %}
+            {% if hasSidebar|default(false) %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            {% block main %}
+                            {% endblock %}
+                        </div>
+                        <div class="col-lg-4">
+                            {% block sidebar %}
+                                {% include ('layout/_sidebar.html.twig') %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                {% block body %}{% endblock %}
+            {% endif %}
+        {% endset %}
+
+        <div class="main my-5">
+            {{ content }}
+        </div>
+
+        {% include('layout/_footer.html.twig') %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>

@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--footer-bg);
+  margin-top: auto;
+  --color-menu-bg-hover: var(--footer-hover);
+  --color-menu: var(--body-color);
+  --color-menu-hover: var(--body-color);
+
+
+  > .container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.footer .menu-link {
+  padding: 1rem .5rem;
+}

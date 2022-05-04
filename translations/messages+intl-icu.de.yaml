@@ -1,0 +1,11 @@
+app:
+  name: LogSeq Pages
+
+logseq:
+  contents: Inhalte
+
+theme:
+  change_to_light: 'zum hellen Design wechseln'
+  change_to_dark: 'zum dunklen Design wechseln'
+  dark: 'Dunkler Modus'
+  light: 'Heller Modus'

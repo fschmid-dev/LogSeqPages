@@ -1,4 +1,7 @@
 {
+    "dflydev/dot-access-data": {
+        "version": "v3.0.1"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -83,8 +86,20 @@
     "laminas/laminas-code": {
         "version": "4.5.1"
     },
+    "league/commonmark": {
+        "version": "2.3.0"
+    },
+    "league/config": {
+        "version": "v1.1.1"
+    },
     "monolog/monolog": {
         "version": "2.5.0"
+    },
+    "nette/schema": {
+        "version": "v1.2.2"
+    },
+    "nette/utils": {
+        "version": "v3.2.7"
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
@@ -126,6 +141,18 @@
         },
         "files": [
             "config/packages/sensio_framework_extra.yaml"
+        ]
+    },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "9d254a22efca7264203eea98b866f16f944b2f09"
+        },
+        "files": [
+            "public/.htaccess"
         ]
     },
     "symfony/asset": {
@@ -171,9 +198,6 @@
         "version": "v3.0.1"
     },
     "symfony/doctrine-bridge": {
-        "version": "v6.0.8"
-    },
-    "symfony/doctrine-messenger": {
         "version": "v6.0.8"
     },
     "symfony/dotenv": {
@@ -266,18 +290,6 @@
             "version": "1.0",
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
-    },
-    "symfony/messenger": {
-        "version": "6.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "6.0",
-            "ref": "25e3c964d3aee480b3acc3114ffb7940c89edfed"
-        },
-        "files": [
-            "config/packages/messenger.yaml"
-        ]
     },
     "symfony/mime": {
         "version": "v6.0.8"
@@ -495,6 +507,9 @@
         "version": "v6.0.3"
     },
     "twig/extra-bundle": {
+        "version": "v3.3.8"
+    },
+    "twig/markdown-extra": {
         "version": "v3.3.8"
     },
     "twig/twig": {

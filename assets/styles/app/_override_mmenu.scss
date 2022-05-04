@@ -1,0 +1,31 @@
+.mm-spn {
+  &.mm-spn {
+    background-color: var(--color-primary);
+    color: var(--color-menu);
+
+    button {
+      box-sizing: border-box;
+      display: block;
+      margin: 0;
+      padding: calc((var(--mm-spn-item-height) - var(--mm-spn-line-height))/2) var(--mm-spn-item-indent);
+      position: relative;
+      z-index: 1;
+    }
+
+    ul {
+      background-color: var(--color-mobile-menu-bg);
+    }
+
+    .dropdown-toggle {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &.mm-spn--navbar.mm-spn--main {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
